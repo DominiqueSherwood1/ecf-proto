@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+    titleText: "Link confirmed for {School Name} and {LP Name}"
+    }) }}
+
+
+
+          <p>{LP Name} working with {DP Name}  is now the provider delivering the fully funded Early Career Framework induction programme training for {School Name}.</p>
+
+
+
+          <p>Start date: DD Month YYYY</p>
+
+          <h3 class="govuk-heading-m">What happens next?</h3>
+
+          <p>You can save or print out the agreement <a href="/pdf">print out the agreement</a> for your records</p>
+
+          <p>You can continue to your admin dashboard to add teachers and mentors to your programme.</p>
+
+{{ govukButton({text: "Continue to dashboard", href:"./link-agreement"}) }}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  School Lookup | Early Career Framework
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+    {
+      text: "Dashboard",
+      href: "../dashboard"
+    },
+    {
+      text: "Schools",
+      href: "./"
+    }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-two-thirds">
+		  <h1 class="govuk-heading-l">Find your school</h1>
+      <p class="govuk-body">Start typing the name of your school and select the correct school.</p>
+      <form action="./select-your-school" class="form" method="POST">
+      {{ govukInput({
+
+          classes: "govuk-input",
+          id: "search",
+          name: "search",
+          type: "search",
+          spellcheck: false
+        }) }}
+      {{ govukButton({
+          text: "Find school"
+        }) }}
+      </form>
+	  </div>
+</div>
+{% endblock %}

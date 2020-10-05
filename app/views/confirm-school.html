@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  School Lookup | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-two-thirds">
+		  <h1 class="govuk-heading-l">Confirm your school</h1>
+
+<table class="govuk-table">
+
+<caption class="govuk-table__caption">Corfe Hills School</caption>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Address</td>
+      <td class="govuk-table__cell">Higher Blandford Rd, Broadstone<br> BH18 9BG</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">URN</td>
+      <td class="govuk-table__cell">0000000</td>
+    </tr>
+  </tbody>
+</table>
+
+          {{ govukButton({text: "Confirm and Continue", href:"./name"}) }}
+
+    <p class="govuk-body"><a href="#" class="govuk-link">Go back to school results</a></p>
+
+	  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+    titleText: "You have accepted the invite from Ark Academies Trust"
+    }) }}
+
+
+
+          <p>{LP Name} working with {DP Name} will be the provider delivering the fully funded Early Career Framework induction programme training for {School Name}.</p>
+
+{{ govukButton({text: "Set up the link agreement", href:"./link-agreement"}) }}
+
+  <p>You will have an opportunity to review the agreement before you confirm. </p>
+
+    <p><a href="/dashboard">Cancel acceptance and go to the invitations dashboard</a></p>
+
+    </div>
+  </div>
+{% endblock %}

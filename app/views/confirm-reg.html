@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  School registered | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+    titleText: "Registration complete."
+    }) }}
+
+    <p>You have registered Corfe Hills School on the Early Career Framework induction programme</p>
+      <h3 class="govuk-section-break govuk-section-break--l govuk-section-break">
+        <h3 class="govuk-heading-m">What happens next</h3>
+          <p>You can now view invitations to Corfe Hills School from providers who have said they are available to deliver the induction programme for your school.</p>
+
+      {{ govukButton({ text: "Go to dashboard", href: "../dashboard",  classes: "govuk-button--secondary" }) }}
+
+        <h3 class="govuk-heading-m">Exit</h3>
+        <p>To sign back into this service go to www.education.services.gov.uk/early-career-framework-induction/home (save this link).</p>
+
+
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+    </p>
+    </div>
+  </div>
+{% endblock %}

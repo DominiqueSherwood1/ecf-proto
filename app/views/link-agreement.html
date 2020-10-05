@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-xl">Confirm agreement</h1>
+
+  <p>Start date: NN Month YYYY</p>
+
+
+<p>This Agreement shall commence on 1st September 2019 and shall continue until it is terminated in accordance with Clause 11.</p>
+
+
+<p>The parties agree to fulfil their respective roles and responsibilities in supporting any NQT who is completing the Induction Period at the School in accordance with the Legislation, Regulations and the Guidance and to a professional standard.</p>
+
+
+<p><a href="/pdf">Print a PDF of this agreement</a></p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    When you confirm the link agreement it will not be possible for you to reverse this decision using the online service.
+  </strong>
+</div>
+
+
+
+{{ govukButton({text: "Confirm agreement", href:"./final-confirm"}) }}
+<p><a href="/">Save and return to confirm the agreement later</a></p>
+
+
+    </div>
+  </div>
+{% endblock %}

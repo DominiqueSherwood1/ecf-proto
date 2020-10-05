@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Email sign in
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page"">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+	  {{ govukPanel({
+		titleText: "Check your email"
+	  }) }}
+
+	  <p class="govuk-body">We have sent a confirmation email to {XXXX@XXX}.</p>
+
+	  <p class="govuk-body">
+		Emails sometimes take a few minutes to arrive. If you do not see your confirmation email, check your spam folder or request a resend.
+	  </p>
+
+	  <p><a href="" class="govuk-link">Resend email</a></p>
+
+
+
+
+	  {{ govukInsetText({
+		html: '
+    <strong class="govuk-tag govuk-tag--grey">PROTOTYPE</strong>
+    The email will contain a link to verify authentication, bringing the visitor back.
+    From the previous START pages, we will save a return-to reference to quickly get the user back
+    onto the correct track.
+    <ul>
+    <li><a href="./email-demo"> Go to email demo</a></li>
+    <li><a href="./dashboard">Skip to Dashboard</a></li>
+    <li><a href="./schools/search">Skip to School Registration</a></li>
+    </ul>
+    '
+	  }) }}
+  </div>
+</div>
+
+{% endblock %}

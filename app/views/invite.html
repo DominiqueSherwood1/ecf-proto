@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Invitation from Ark Academies Trust</h2>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"">
+
+          <p>Training delivery partner: Saffron Walden County High School</p>
+          <p>Training and self-study content author: Teach First<br>
+          Number of schools linked in Hampshire: 87<br>
+          Number of schools linked in Hampshire Learn Fast MAT: 55<br>
+        </p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"">
+
+        <p>Invite copy to go here</p>
+
+        <p>If you would like further information or have any questions you can email Ark <a href="mailto:ecf@ark.org.uk">ecf@ark.org.uk</a></p>
+
+
+
+
+  {{ govukButton({text: "Accept Invitation", href:"./acceptance"}) }}
+    </div>
+  </div>
+{% endblock %}
