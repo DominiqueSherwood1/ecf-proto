@@ -6,67 +6,86 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Check your invites</h1>
+    <div class="govuk-grid-column-two-thirds-from-desktop">
 
-    {{ govukSummaryList({
-      classes: 'govuk-!-margin-bottom-9',
-      rows: [
-      {
-        key: {
-          text: "Induction Partner"
-        },
-        value: {
-          text: data['deliveryPartnerName']
-        },
-        actions: {
-          items: [
-            {
-            href: "./assign",
-            text: "Change",
-            visuallyHiddenText: "partner"
-            }
-          ]
-        }
-      },
-      {
-        key: {
-          text: "Invitation message"
-        },
-        value: {
-          text: data['message']
-        },
-        actions: {
-          items: [
-            {
-            href: "./assign",
-            text: "Change",
-            visuallyHiddenText: "message"
-            }
-          ]
-        }
-      },
-      {
-        key: {
-          text: "Reply-to email address"
-        },
-        value: {
-          text: data['replyEmail']
-        },
-        actions: {
-          items: [
-            {
-            href: "./assign",
-            text: "Change",
-            visuallyHiddenText: "reply email"
-            }
-          ]
-        }
-      }
-      ]
-    }) }}
+      <h1 class="govuk-heading-xl">Check your bulk invite</h1>
 
-      {{ govukButton({ text: "Confirm and send", href: "./bulk-confirmed" }) }}
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             School details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Selected list
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Delivery partner assigned
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['bulk-delivery-partner'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="./bulk-assign">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Invitation message
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['bulk-invite-text'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="./bulk-invitation">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reply email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['bulk-email-reply'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="./bulk-invitation">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+
+</dl>
+
+
+      <form action="./bulk-confirmed" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and send
+        </button>
+
+      </form>
+
+    </div>
   </div>
-</div>
 {% endblock %}
