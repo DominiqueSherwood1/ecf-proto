@@ -152,6 +152,104 @@
     </div>
     <div class="govuk-grid-column-two-thirds">
 
+<!--School 1-->
+
+      <h4 class="govuk-heading-m">Corfe Hills School</h4>
+      <p>Higher Blandford Road, Broadstone, Dorset,BH18 9BG</p>
+      <p>URN: 136574, DfE number: 839/5410</p>
+      <p>Local authority: Bournemouth, Christchurch and Poole
+      <p>ECF Status: <strong class="govuk-tag govuk-tag--grey">Not yet registered</strong></p>
+      <p>Secondary</p>
+      <p>Academy converter</p>
+
+      {{ govukButton({text: "Invite school", href: "./assign"}) }}
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h4 class="govuk-heading-m">Corfe Hills School</h4>
+      <p>Higher Blandford Road, Broadstone, Dorset,BH18 9BG<br>
+      URN: 136574, DfE number: 839/5410 <br>
+      Local authority: Bournemouth, Christchurch and Poole<br>
+      ECF Status: <strong class="govuk-tag govuk-tag--grey">Not yet registered</strong><br>
+      Secondary<br>
+      Academy converter</p>
+
+      {{ govukButton({text: "Invite school", href: "./assign"}) }}
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <!--School 2-->
+
+            <h4 class="govuk-heading-m">Avonbourne Boys' Academy</h4>
+            <p>Harewood Avenue, Bournemouth, Dorset, BH7 6NZ</p>
+            <p>URN: 136574, DfE number: 839/5410</p>
+            <p>Local authority: Bournemouth, Christchurch and Poole
+            <p>ECF Status: <strong class="govuk-tag govuk-tag--red">Responded to others</strong></p>
+            <p>Secondary</p>
+            <p>Academy converter</p>
+
+            {{ govukButton({text: "Invite school", href: "./assign"}) }}
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <!--School 3-->
+
+            <h4 class="govuk-heading-m">St. Aldhelm's Academy</h4>
+            <p>Herbert Avenue, Poole, Dorset, BH12 4HS</p>
+            <p>URN: 136574, DfE number: 839/5410</p>
+            <p>Local authority: Bournemouth, Christchurch and Poole
+            <p>ECF Status: <strong class="govuk-tag govuk-tag--yellow">Not responded to any</strong></p>
+            <p>Pupil premium above 40%</p>
+            <p>Secondary</p>
+            <p>Academy converter</p>
+
+            {{ govukButton({text: "Invite school", href: "./assign"}) }}
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+            <div>
+              <h4 class="govuk-heading-m">
+                St. Aldhelm's Academy
+              </h4>
+
+              {{ govukSummaryList({
+                classes: 'govuk-summary-list--no-border',
+                rows: [
+                  {
+                    key: {text: "Address"},
+                    value: {html: "Herbert Avenue, Poole, Dorset, <br/>BH12 4HS"}
+                  },
+                  {
+                    key: {text: "Local authority"},
+                    value: {text: "Bournemouth, Christchurch and Poole (839)"}
+                  },
+                  {
+                    key: {text: "ID"},
+                    value: {html: "<abbr title=\"Unique Reference Number\">URN</abbr>: 136574, DfE number: 839/5410<br><abbr title=\"UK Provider Reference Number\">UKPRN</abbr>: 10033260"}
+                  },
+                  {
+                    key: {html: '<abbr title="Early Career Framework">ECF</abbr> Status'},
+                    value: {html: govukTag({text: "Not responded to any", classes: "govuk-tag--yellow"})}
+                  },
+                  {
+                    key: {text: "Characteristics"},
+                    value: {text: "Pupil premium above 40% "}
+                  },
+                  {
+                    key: {text: "Phase of education"},
+                    value: {text: "Secondary"}
+                  },
+                  {
+                    key: {text: "Type of school"},
+                    value: {text: "Academy converter"}
+                  }
+
+                ]
+                }) }}
+              {{ govukButton({text: "Invite school", href: "./assign"}) }}
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            </div>
+
+
+
 
 <!--School 1-->
 
@@ -197,6 +295,8 @@
         {{ govukButton({text: "Invite school", href: "./assign"}) }}
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
       </div>
+
+
 
 <!--School 2-->
 
