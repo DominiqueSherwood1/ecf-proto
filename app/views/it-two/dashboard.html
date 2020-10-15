@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>Administrator Account: <br> <a href="#">Dominique Sherwood</a>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h1 class="govuk-heading-xl">Programme summary</h1>
+
+  <h3 class="govuk-heading-m">Full Induction Programme Invitations</h3>
+
+    <p class="govuk-body">
+      Corfe Hills School has <strong>8</strong> invites from providers of the induction programme.
+    </p>
+    {{ govukButton({ text: "View your invites", href: "/it-two/supplier",  classes: "govuk-button" }) }}
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">Core Induction Programme</h3>
+  <p>If you would rather work with a provider that is not on the <a href="/dashboard">list of DfE providers</a>then you will need to consider the <a href="/dashboard">core induction programme</a> option.
+
+
+
+
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign-in | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Invitation from Ark Academies Trust</h2>
+
+      <p>Ark Academies Trust has offered to be the provider delivering the fully funded Early Career Framework induction programme training for Corfe Hills School.</p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"">
+
+
+      <p><strong>Programme contributors:</strong><br>
+        Training delivery partner: Blue Post Learning Trust<br>
+        Self-study and training outlines author: Teach First</p>
+
+          <p><strong>Ark Academies Trust is already working with:</strong><br>
+            87 / 300 schools in Hackney<br>
+            12 / 60 schools in London Excellence MAT<br>
+        </p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"">
+
+        <p><i>Hello from Ark Academies Trust,</i></p>
+
+<p><i>We met your headteacher recently at an online recruitment event for your region, so we have a good picture of how induction is working and what aspects need more focus.
+
+We run a very supportive induction process, helping both your mentor and your NQT to get the most from the free training and helping them to manage their time and cope with the pressures of the first year in a school.
+
+We hope to hear back from you and would very much like to tell you more about our programme.</i></p>
+
+<p><i>Best wishes<br>
+Ark Academies Trust
+</i></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"">
+
+        <p>You can <a href="mailto:joe@example.com?subject=feedback">reply to this invite</a> if you have specific questions about the programme or just to express interest. The provider will then be able to see your name and email address and can reply directly to you.</p>
+
+        <p>If you have decided to work with this provider you can set up the agreement now. (You will have an opportunity to review before you confirm.)</p>
+
+
+  {{ govukButton({text: "Set up the agreement", href:"/it-two/link-agreement"}) }} {{ govukButton({ text: "Return to invites", href: "../supplier",  classes: "govuk-button--secondary" }) }}
+
+    </div>
+  </div>
+{% endblock %}
