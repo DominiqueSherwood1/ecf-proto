@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Email sign in
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/email"">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+	  {{ govukPanel({
+		titleText: "Check your email"
+	  }) }}
+
+	  <p class="govuk-body">We have sent a confirmation email to {XXXX@XXX}.</p>
+
+	  <p class="govuk-body">
+		Emails sometimes take a few minutes to arrive. If you do not see your confirmation email, check your spam folder or request a resend.
+	  </p>
+
+    <p><a href="/it-two/email-demo"> Go to email demo</a></p>
+
+  </div>
+</div>
+
+{% endblock %}

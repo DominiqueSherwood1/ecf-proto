@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Email sign in
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/role"">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/it-two/check-email" method="post">
+
+    <h1 class="govuk-heading-xl">Enter your email address</h1>
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Enter a school-based email address for confirmation.
+          </label>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+            <!--div hint was here-->
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Send confirmation email</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
