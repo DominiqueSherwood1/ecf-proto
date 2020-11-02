@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  School registered | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+    titleText: "Sign in details complete."
+    }) }}
+
+    <p>You have created your sign in details.</p>
+    <p>We have sent you another email with a link so that you can sign back into this service without registering again.</p>
+    <p>You can now access your school's Early Career Framework </p>
+
+      {{ govukButton({ text: "Go to framework", href: "/it-three/",  classes: "govuk-button-" }) }}
+
+    </div>
+  </div>
+{% endblock %}

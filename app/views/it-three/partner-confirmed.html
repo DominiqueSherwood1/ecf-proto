@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  School registered | Early Career Framework
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+    titleText: "Partnership confirmed."
+    }) }}
+
+    <p>Thank you for confirming [school name's] partnership with Upward Learing.</p>
+    <p>You can now create sign in details to access your school's account.</p>
+
+      {{ govukButton({ text: "Create sign in details", href: "/it-three/admin",  classes: "govuk-button" }) }}
+
+    </div>
+  </div>
+{% endblock %}
